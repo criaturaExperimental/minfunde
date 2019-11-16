@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
       <Header name="person 🧘🏾‍♀️"/>
-      <Timer time={clock} clockHandler={setClock} />
+      <Timer time={clock} clockHandler={setClock}/>
     </div>
   );
 }
