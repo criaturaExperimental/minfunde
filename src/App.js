@@ -6,8 +6,8 @@ function App() {
   const [clock, setClock] = useState(10);
   return (
     <div className="App">
-      <Header name="person 🧘🏾‍♀️"/>
-      <Timer time={clock} clockHandler={setClock}/>
+      <Header name="person 🧘🏾‍♀️" />
+      <Timer time={clock} clockHandler={setClock} />
     </div>
   );
 }
