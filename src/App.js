@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Header } from './components/Header';
 import { Timer } from './components/Timer';
 
 function App() {
+  const [clock, setClock] = useState(10);
   return (
     <div className="App">
       <Header name="person 🧘🏾‍♀️"/>
-      <Timer />
+      <Timer time={clock} clockHandler={setClock} />
     </div>
   );
 }
