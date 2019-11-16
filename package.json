@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "eslint": "^6.6.0",
+    "eslint-plugin-jest": "^23.0.4",
     "prettier": "1.19.1"
   }
 }
