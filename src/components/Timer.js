@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from './Button';
-import { timer } from '../domain/timer';
+import { timer } from '../infraestructure/timer';
 
 export function Timer(props) {
   return (
