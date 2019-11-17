@@ -24,6 +24,7 @@ module.exports = {
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
+    'array-bracket-spacing': ['always', { singleValue: false }],
     'react/prop-types': 'off',
     'jest/no-disabled-tests': 'warn',
     'jest/no-focused-tests': 'error',
