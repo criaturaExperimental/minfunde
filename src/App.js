@@ -3,7 +3,7 @@ import { Header } from './components/Header';
 import { Timer } from './components/Timer';
 
 function App() {
-  const [clock, setClock] = useState(10);
+  const [clock, setClock] = useState(0);
   return (
     <div className="App">
       <Header name="person 🧘🏾‍♀️" />
