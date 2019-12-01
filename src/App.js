@@ -11,13 +11,22 @@ function App() {
     setCount(count + 1);
   }, isRunning);
 
+  function increaseTime() {
+    setCount(count + 1);
+  }
+  function decreaseTime() {
+    setCount(count - 1);
+  }
+
   return (
     <div className="App">
       <Header name="person 🧘🏾‍♀️"/>
-      <h2>Count is {count} and is {isRunning ? 'Running' : 'Stopped'}</h2>
+      <h2>Count is {count} and is {isRunning ? 'running' : 'stopped'}</h2>
       <Button text={isRunning ? 'Stop' : 'Start'}
         clickHandler={() => switchRunning(!isRunning)}
       />
+      <Button text="Increase time" clickHandler={increaseTime}/>
+      <Button text="Decrease time" clickHandler={decreaseTime}/>
     </div>
   );
 }
