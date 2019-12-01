@@ -1,20 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-
-function useInterval(callback) {
-  const savedCallback = useRef();
-
-  useEffect(() => {
-    savedCallback.current = callback;
-  });
-
-  useEffect(() => {
-    function tick() {
-      savedCallback.current();
-    }
-    let id = setInterval(tick, 1000);
-    return () => clearInterval(id);
-  }, []);
-}
+import React, { useState } from 'react';
+import { useInterval } from './hooks/useInterval';
 
 function App() {
   const [ count, setCount ] = useState(0);
