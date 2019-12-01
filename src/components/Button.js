@@ -1,5 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
 
-export function Button(props) {
-  return <button onClick={props.clickHandler}>{props.text}</button>;
+function ButtonBase(props) {
+  return <button className={props.className}
+    onClick={props.clickHandler}>{props.text}
+  </button>;
 }
+
+export const Button = styled(ButtonBase)`
+  cursor: pointer;
+`;
