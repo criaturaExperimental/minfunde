@@ -14,4 +14,8 @@ describe('When formatting time', () => {
     expect(timeFormatter(60)).toBe('01:00');
   });
 
+  it('should return 01:00:00 for 3600', () => {
+    expect(timeFormatter(3600)).toBe('01:00:00');
+  });
+
 });

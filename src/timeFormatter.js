@@ -6,12 +6,11 @@ function addLeftZero(number) {
 }
 
 export function timeFormatter(total_secs) {
-  const num = total_secs;
-  const hours = num / 3600;
+  const hours = total_secs / 3600;
   const restHours = Math.floor(hours);
   const minutes = (hours - restHours) * 60;
   const restMinutes = Math.floor(minutes);
   const seconds = (minutes - restMinutes) * 60;
   const restSeconds = Math.round(seconds);
-  return `${addLeftZero(restHours)}:${addLeftZero(restMinutes)}:${addLeftZero(restSeconds)}`;
+  return `${addLeftZero(restHours) > 0 ? addLeftZero(restHours) + ':' : ''}${addLeftZero(restMinutes)}:${addLeftZero(restSeconds)}`;
 }
