@@ -1,14 +1,21 @@
 import React, { useState } from 'react';
 import { useInterval } from './hooks/useInterval';
+import { timeFormatter } from './timeFormatter';
+
 import { Header } from './components/Header';
 import { Button } from './components/Button';
+
 
 function App() {
   const [ count, setCount ] = useState(0);
   const [ isRunning, switchRunning ] = useState(false);
 
   useInterval(() => {
-    setCount(count + 1);
+    if (count > 0) {
+      setCount(count - 1);
+    } else {
+      switchRunning(false);
+    }
   }, isRunning);
 
   function increaseTime() {
@@ -21,7 +28,7 @@ function App() {
   return (
     <div className="App">
       <Header name="person 🧘🏾‍♀️"/>
-      <h2>Count is {count} and is {isRunning ? 'running' : 'stopped'}</h2>
+      <h2>Count is {timeFormatter(count)} and is {isRunning ? 'running' : 'stopped'}</h2>
       <Button text={isRunning ? 'Stop' : 'Start'}
         clickHandler={() => switchRunning(!isRunning)}
       />
