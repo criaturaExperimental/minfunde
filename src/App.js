@@ -6,6 +6,8 @@ import { Header } from './components/Header';
 import { Button } from './components/Button';
 import { ProgressBar } from './components/ProgressBar';
 
+const chime_sound = new Audio('https://api.coderrocketfuel.com/assets/pomodoro-times-up.mp3');
+
 function App() {
   const [ count, setCount ] = useState(0);
   const [ isRunning, switchRunning ] = useState(false);
@@ -37,6 +39,7 @@ function App() {
 
   function stopTimer() {
     switchRunning(!isRunning);
+    chime_sound.play();
   }
 
   function calculatePercentage() {
